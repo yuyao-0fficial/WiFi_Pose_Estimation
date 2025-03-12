@@ -4,7 +4,7 @@ This is the key source code for paper **AI-Based Real-Time WiFi Human Pose Estim
 
 
 ### **Requirements**
-** *python 3.8* **
+***python 3.8***
 
 **Anaconda** is strongly recommended for managing python packages.
 
