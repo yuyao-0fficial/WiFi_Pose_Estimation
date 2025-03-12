@@ -1,7 +1,12 @@
 ## **AI-Based Real-Time WiFi Human Pose Estimation by a Single Communication Chain**
-This is the key source code for paper **AI-Based Real-Time WiFi Human Pose Estimation by a Single Communication Chain**
+This is the key source code for paper **AI-Based Real-Time WiFi Human Pose Estimation by a Single Communication Chain**.
 ![Network Design](https://github.com/yuyao-0fficial/WiFi_Pose_Estimation/blob/main/Network_Design.png "HPE Network Design")
 
+
+### **Requirements**
+** *python 3.8* **
+**Anaconda** is strongly recommended for managing python packages.
+**Cuda** and **Nvidia graphics cards** are strongly recommended for acceleration.
 
 ### **Quick Start**
 Create and activate a new virtual environment using anaconda：
