@@ -62,3 +62,10 @@ WiFi_Pose_Estimation
 └── utils
     └── Single_Person_Estimator_Loss_3.py                       ## Loss function
 ```
+
+#### **Data Collection**
+The CSI data in the dataset is obtained by [Linux 802.11n CSI Tool](https://github.com/spanev/linux-80211n-csitool), and the human pose data is collected by [PoseNet](https://github.com/mks0601/3DMPPE_POSENET_RELEASE) combined with stereo vision.
+
+#### **Variables**
+There are several key variables in `Single_person_unit_train.py` from line 39 to line 50: 
+
