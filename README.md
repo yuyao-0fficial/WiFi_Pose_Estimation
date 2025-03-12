@@ -1,5 +1,6 @@
 ## **AI-Based Real-Time WiFi Human Pose Estimation by a Single Communication Chain**
 This is the key source code for paper **AI-Based Real-Time WiFi Human Pose Estimation by a Single Communication Chain**
+![Network Design](https://github.com/yuyao-0fficial/WiFi_Pose_Estimation/blob/main/Network_Design.png "HPE Network Design")
 
 
 ### **Quick Start**
@@ -471,4 +472,4 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
 </table>
 
 #### **transfer.py**
-
+This file is used to evaluate the estimated poses， where part Total Error Count is used to calculate the estimated error for the population, and part Pose Display is used to show the raw data and the estimated pose one by one.
