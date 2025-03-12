@@ -25,7 +25,7 @@ Run `Single_person_unit_train.py` to invoke HPE network and estimate human pose 
 python Single_person_unit_train.py
 ```
 
-Use `transfer.py` to evaluate the estimated pose:
+Use `transfer.py` to evaluate the estimated poses:
 ```
 python Single_person_unit_train.py
 ```
@@ -60,6 +60,5 @@ WiFi_Pose_Estimation
 ├── Single_person_unit_train.py                                 ## The code to train and test the HPE model
 ├── transfer.py                                                 ## The code to evaluate the estimated poses
 └── utils
-    └── Single_Person_Estimator_Loss_3.py
-
+    └── Single_Person_Estimator_Loss_3.py                       ## Loss function
 ```
