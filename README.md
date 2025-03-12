@@ -36,10 +36,10 @@ The structure of the repository is as follows:
 ```
 WiFi_Pose_Estimation
 ├── network_files
-│   └── Single_Person_Estimation_unit.py
+│   └── Single_Person_Estimation_unit.py                    ## HPE Network
 ├── README.md
 ├── requirements.txt
-├── save_weights
+├── save_weights                                            ## Trained HPE Network Weights
 │   ├── AutoEncoder_stg3_2024_12_26_18_54_37.pth
 │   └── Single_Person_Estimator_4_2024_9_23_9_7_15.pth
 ├── single_person_annotation_5

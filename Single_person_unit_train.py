@@ -40,17 +40,16 @@ def main():
     continu = 1
     L_R = 0.002
     flag_train = 0  # 1是训练，0是测试
-    sche = 1
     losses_weight = 0.5
     loss_posit_weight = 0.5
     max_weight = 0.99999999
-    pro_weight_1 = 0.7
-    pro_weight_2 = 0.3
     total = 4608
     batch_size = 256
     batch_val = 128
     batch_test = 16
     epoch = 4000
+
+    sche = 1
 
     # 创建模型
     model = PoseNet(stg=stg, flag_train=flag_train)

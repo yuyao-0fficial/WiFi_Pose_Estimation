@@ -135,222 +135,222 @@ def main():
     # # # # # # # # # # # #
     # # Total Error Count #
     # # # # # # # # # # # #
-    # dir_depth_out = [f for f in os.listdir('Single Person Output') if f.startswith('depth_stg4_')]
-    # dir_depth_out = natsort.natsorted(dir_depth_out)
-    # dir_depth_ori = [f for f in os.listdir('Single Person Output') if f.startswith('depth_test_stg4_')]
-    # dir_depth_ori = natsort.natsorted(dir_depth_ori)
-    # dir_heatmap_out = [f for f in os.listdir('Single Person Output') if f.startswith('heatmap_stg4_')]
-    # dir_heatmap_out = natsort.natsorted(dir_heatmap_out)
-    # dir_heatmap_ori = [f for f in os.listdir('Single Person Output') if f.startswith('heatmap_test_stg4_')]
-    # dir_heatmap_ori = natsort.natsorted(dir_heatmap_ori)
-    # dir_posit_out = [f for f in os.listdir('Single Person Output') if f.startswith('posit_stg4_')]
-    # dir_posit_out = natsort.natsorted(dir_posit_out)
-    # dir_posit_ori = [f for f in os.listdir('Single Person Output') if f.startswith('posit_test_stg4_')]
-    # dir_posit_ori = natsort.natsorted(dir_posit_ori)
-    # L = 24
-    #
-    # err_pose = []
-    # err_pose_x_mae = 0
-    # err_pose_y_mae = 0
-    # err_pose_z_mae = 0
-    # err_pose_joint_mae = np.zeros(16)
-    # err_pose_mse = 0
-    # err_pose_x_mse = 0
-    # err_pose_y_mse = 0
-    # err_pose_z_mse = 0
-    # err_pose_joint_mse = np.zeros(16)
-    # err_posit = []
-    # err_posit_x_mae = 0
-    # err_posit_z_mae = 0
-    # err_posit_mse = 0
-    # err_posit_x_mse = 0
-    # err_posit_z_mse = 0
-    # for n in range(24):  # (0, 4608//16, 12):
-    #     depth_out_batch = scio.loadmat('Single Person Output/' + dir_depth_out[n])['Depth']
-    #     depth_ori_batch = scio.loadmat('Single Person Output/' + dir_depth_ori[n])['Depth']
-    #     heatmap_out_batch = scio.loadmat('Single Person Output/' + dir_heatmap_out[n])['HeatMap']
-    #     heatmap_ori_batch = scio.loadmat('Single Person Output/' + dir_heatmap_ori[n])['HeatMap']
-    #     posit_out_batch = scio.loadmat('Single Person Output/' + dir_posit_out[n])['Position']
-    #     posit_ori_batch = scio.loadmat('Single Person Output/' + dir_posit_ori[n])['Position']
-    #     for m in range(batch_size):
-    #         depth_out = depth_out_batch[m, :, :].reshape([15, 64])
-    #         depth_ori = depth_ori_batch[m, :, :].reshape([15, 64])
-    #         heatmap_out = heatmap_out_batch[m, :, :, :].reshape([15, 64, 64])
-    #         heatmap_ori = heatmap_ori_batch[m, :, :, :].reshape([15, 64, 64])
-    #         posit_out = posit_out_batch[m, :, :].reshape([128, 128])
-    #         posit_ori = posit_ori_batch[m, :, :].reshape([128, 128])
-    #
-    #         po_out, hm_out, dp_out = get_posit(posit_out, heatmap_out, depth_out)
-    #         po_ori, hm_ori, dp_ori = get_posit(posit_ori, heatmap_ori, depth_ori)
-    #
-    #         err_pose.append((((dp_out - dp_ori) ** 2 + np.sum((hm_out - hm_ori) ** 2, 1)) ** 0.5).mean())
-    #         err_pose_x_mae += (np.abs(hm_out - hm_ori)[:, 1]).mean() / (L * batch_size)
-    #         err_pose_y_mae += (np.abs(hm_out - hm_ori)[:, 0]).mean() / (L * batch_size)
-    #         err_pose_z_mae += np.abs(dp_out - dp_ori).mean() / (L * batch_size)
-    #         err_pose_joint_mae += (((dp_out - dp_ori) ** 2 + np.sum((hm_out - hm_ori) ** 2, 1)) ** 0.5) / (
-    #                     L * batch_size)
-    #
-    #         err_posit.append(((po_out - po_ori) ** 2).sum() ** 0.5)
-    #         err_posit_x_mae += np.abs((po_out - po_ori)[0]) / (L * batch_size)
-    #         err_posit_z_mae += np.abs((po_out - po_ori)[1]) / (L * batch_size)
-    #
-    #         err_pose_mse += ((dp_out - dp_ori) ** 2 + np.sum((hm_out - hm_ori) ** 2, 1)).mean() / (
-    #                 L * batch_size)
-    #         err_pose_x_mse += ((hm_out - hm_ori)[:, 1] ** 2).mean() / (L * batch_size)
-    #         err_pose_y_mse += ((hm_out - hm_ori)[:, 0] ** 2).mean() / (L * batch_size)
-    #         err_pose_z_mse += ((dp_out - dp_ori) ** 2).mean() / (L * batch_size)
-    #         err_pose_joint_mse += ((dp_out - dp_ori) ** 2 + np.sum((hm_out - hm_ori) ** 2, 1)) / (
-    #                 L * batch_size)
-    #
-    #         err_posit_mse += ((po_out - po_ori) ** 2).sum() / (L * batch_size)
-    #         err_posit_x_mse += ((po_out - po_ori)[0] ** 2) / (L * batch_size)
-    #         err_posit_z_mse += ((po_out - po_ori)[1] ** 2) / (L * batch_size)
-    #
-    # err_pose = np.array(err_pose)
-    # err_posit = np.array(err_posit)
-    # err_pose_mae = err_pose.mean()
-    # err_posit_mae = err_posit.mean()
-    #
-    # err_pose_out, cdf_pose = Cumsum_cdf(err_pose)
-    # err_posit_out, cdf_posit = Cumsum_cdf(err_posit)
-    # scio.savemat(
-    #     './single_person_annotation_5/pose_err.mat',
-    #     {'CDF': cdf_pose, 'Err': err_pose_out})
-    # scio.savemat(
-    #     './single_person_annotation_5/posit_err.mat',
-    #     {'CDF': cdf_posit, 'Err': err_posit_out})
-    # fig1 = plt.figure(1)
-    # ax1 = fig1.add_subplot(111)
-    # ax1.plot(err_pose_out, cdf_pose)
-    # ax1.set_xlabel('Average Pose Estimation Error (m)')
-    # ax1.set_ylabel('Empirical CDF')
-    # fig2 = plt.figure(2)
-    # ax2 = fig2.add_subplot(111)
-    # ax2.plot(err_posit_out, cdf_posit)
-    # ax2.set_xlabel('Localization Error (m)')
-    # ax2.set_ylabel('Empirical CDF')
-    #
-    # print(
-    #     f'Mean Absolute Error: \nPose: {err_pose_mae}  Pose_x: {err_pose_x_mae}  Pose_y: {err_pose_y_mae}  Pose_z: {err_pose_z_mae}')
-    # print(f'Pose_each_joint: \n{err_pose_joint_mae}')
-    # print(f'Position: {err_posit_mae}  Position_x: {err_posit_x_mae}  Position_z:{err_posit_z_mae}')
-    #
-    # print(
-    #     f'\nMean Square Error: \nPose: {err_pose_mse}  Pose_x: {err_pose_x_mse}  Pose_y: {err_pose_y_mse}  Pose_z: {err_pose_z_mse}')
-    # print(f'Pose_each_joint: \n{err_pose_joint_mse}')
-    # print(f'Position: {err_posit_mse}  Position_x: {err_posit_x_mse}  Position_z:{err_posit_z_mse}')
-    # plt.show()
+    dir_depth_out = [f for f in os.listdir('Single Person Output') if f.startswith('depth_stg4_')]
+    dir_depth_out = natsort.natsorted(dir_depth_out)
+    dir_depth_ori = [f for f in os.listdir('Single Person Output') if f.startswith('depth_test_stg4_')]
+    dir_depth_ori = natsort.natsorted(dir_depth_ori)
+    dir_heatmap_out = [f for f in os.listdir('Single Person Output') if f.startswith('heatmap_stg4_')]
+    dir_heatmap_out = natsort.natsorted(dir_heatmap_out)
+    dir_heatmap_ori = [f for f in os.listdir('Single Person Output') if f.startswith('heatmap_test_stg4_')]
+    dir_heatmap_ori = natsort.natsorted(dir_heatmap_ori)
+    dir_posit_out = [f for f in os.listdir('Single Person Output') if f.startswith('posit_stg4_')]
+    dir_posit_out = natsort.natsorted(dir_posit_out)
+    dir_posit_ori = [f for f in os.listdir('Single Person Output') if f.startswith('posit_test_stg4_')]
+    dir_posit_ori = natsort.natsorted(dir_posit_ori)
+    L = 24
+
+    err_pose = []
+    err_pose_x_mae = 0
+    err_pose_y_mae = 0
+    err_pose_z_mae = 0
+    err_pose_joint_mae = np.zeros(16)
+    err_pose_mse = 0
+    err_pose_x_mse = 0
+    err_pose_y_mse = 0
+    err_pose_z_mse = 0
+    err_pose_joint_mse = np.zeros(16)
+    err_posit = []
+    err_posit_x_mae = 0
+    err_posit_z_mae = 0
+    err_posit_mse = 0
+    err_posit_x_mse = 0
+    err_posit_z_mse = 0
+    for n in range(24):  # (0, 4608//16, 12):
+        depth_out_batch = scio.loadmat('Single Person Output/' + dir_depth_out[n])['Depth']
+        depth_ori_batch = scio.loadmat('Single Person Output/' + dir_depth_ori[n])['Depth']
+        heatmap_out_batch = scio.loadmat('Single Person Output/' + dir_heatmap_out[n])['HeatMap']
+        heatmap_ori_batch = scio.loadmat('Single Person Output/' + dir_heatmap_ori[n])['HeatMap']
+        posit_out_batch = scio.loadmat('Single Person Output/' + dir_posit_out[n])['Position']
+        posit_ori_batch = scio.loadmat('Single Person Output/' + dir_posit_ori[n])['Position']
+        for m in range(batch_size):
+            depth_out = depth_out_batch[m, :, :].reshape([15, 64])
+            depth_ori = depth_ori_batch[m, :, :].reshape([15, 64])
+            heatmap_out = heatmap_out_batch[m, :, :, :].reshape([15, 64, 64])
+            heatmap_ori = heatmap_ori_batch[m, :, :, :].reshape([15, 64, 64])
+            posit_out = posit_out_batch[m, :, :].reshape([128, 128])
+            posit_ori = posit_ori_batch[m, :, :].reshape([128, 128])
+
+            po_out, hm_out, dp_out = get_posit(posit_out, heatmap_out, depth_out)
+            po_ori, hm_ori, dp_ori = get_posit(posit_ori, heatmap_ori, depth_ori)
+
+            err_pose.append((((dp_out - dp_ori) ** 2 + np.sum((hm_out - hm_ori) ** 2, 1)) ** 0.5).mean())
+            err_pose_x_mae += (np.abs(hm_out - hm_ori)[:, 1]).mean() / (L * batch_size)
+            err_pose_y_mae += (np.abs(hm_out - hm_ori)[:, 0]).mean() / (L * batch_size)
+            err_pose_z_mae += np.abs(dp_out - dp_ori).mean() / (L * batch_size)
+            err_pose_joint_mae += (((dp_out - dp_ori) ** 2 + np.sum((hm_out - hm_ori) ** 2, 1)) ** 0.5) / (
+                        L * batch_size)
+
+            err_posit.append(((po_out - po_ori) ** 2).sum() ** 0.5)
+            err_posit_x_mae += np.abs((po_out - po_ori)[0]) / (L * batch_size)
+            err_posit_z_mae += np.abs((po_out - po_ori)[1]) / (L * batch_size)
+
+            err_pose_mse += ((dp_out - dp_ori) ** 2 + np.sum((hm_out - hm_ori) ** 2, 1)).mean() / (
+                    L * batch_size)
+            err_pose_x_mse += ((hm_out - hm_ori)[:, 1] ** 2).mean() / (L * batch_size)
+            err_pose_y_mse += ((hm_out - hm_ori)[:, 0] ** 2).mean() / (L * batch_size)
+            err_pose_z_mse += ((dp_out - dp_ori) ** 2).mean() / (L * batch_size)
+            err_pose_joint_mse += ((dp_out - dp_ori) ** 2 + np.sum((hm_out - hm_ori) ** 2, 1)) / (
+                    L * batch_size)
+
+            err_posit_mse += ((po_out - po_ori) ** 2).sum() / (L * batch_size)
+            err_posit_x_mse += ((po_out - po_ori)[0] ** 2) / (L * batch_size)
+            err_posit_z_mse += ((po_out - po_ori)[1] ** 2) / (L * batch_size)
+
+    err_pose = np.array(err_pose)
+    err_posit = np.array(err_posit)
+    err_pose_mae = err_pose.mean()
+    err_posit_mae = err_posit.mean()
+
+    err_pose_out, cdf_pose = Cumsum_cdf(err_pose)
+    err_posit_out, cdf_posit = Cumsum_cdf(err_posit)
+    scio.savemat(
+        './single_person_annotation_5/pose_err.mat',
+        {'CDF': cdf_pose, 'Err': err_pose_out})
+    scio.savemat(
+        './single_person_annotation_5/posit_err.mat',
+        {'CDF': cdf_posit, 'Err': err_posit_out})
+    fig1 = plt.figure(1)
+    ax1 = fig1.add_subplot(111)
+    ax1.plot(err_pose_out, cdf_pose)
+    ax1.set_xlabel('Average Pose Estimation Error (m)')
+    ax1.set_ylabel('Empirical CDF')
+    fig2 = plt.figure(2)
+    ax2 = fig2.add_subplot(111)
+    ax2.plot(err_posit_out, cdf_posit)
+    ax2.set_xlabel('Localization Error (m)')
+    ax2.set_ylabel('Empirical CDF')
+
+    print(
+        f'Mean Absolute Error: \nPose: {err_pose_mae}  Pose_x: {err_pose_x_mae}  Pose_y: {err_pose_y_mae}  Pose_z: {err_pose_z_mae}')
+    print(f'Pose_each_joint: \n{err_pose_joint_mae}')
+    print(f'Position: {err_posit_mae}  Position_x: {err_posit_x_mae}  Position_z:{err_posit_z_mae}')
+
+    print(
+        f'\nMean Square Error: \nPose: {err_pose_mse}  Pose_x: {err_pose_x_mse}  Pose_y: {err_pose_y_mse}  Pose_z: {err_pose_z_mse}')
+    print(f'Pose_each_joint: \n{err_pose_joint_mse}')
+    print(f'Position: {err_posit_mse}  Position_x: {err_posit_x_mse}  Position_z:{err_posit_z_mse}')
+    plt.show()
 
     # # # # # # # # # # #
     # # # Pose Display  #
     # # # # # # # # # # #
-    skeleton = np.array(
-        [[14, 0], [0, 15], [15, 13], [13, 7], [13, 10], [7, 8], [8, 9], [10, 11], [11, 12], [0, 1], [1, 2], [2, 3],
-         [0, 4], [4, 5], [5, 6]])
-
-    for batch in range(24):
-        root = './Single Person Output/'
-        dir_depth_out_batch_disp = root + 'depth_stg4_' + str(batch) + '_2.mat'
-        dir_depth_ori_batch_disp = root + 'depth_test_stg4_' + str(batch) + '_2.mat'
-        dir_heatmap_out_batch_disp = root + 'heatmap_stg4_' + str(batch) + '_2.mat'
-        dir_heatmap_ori_batch_disp = root + 'heatmap_test_stg4_' + str(batch) + '_2.mat'
-        dir_posit_out_batch_disp = root + 'posit_stg4_' + str(batch) + '_2.mat'
-        dir_posit_ori_batch_disp = root + 'posit_test_stg4_' + str(batch) + '_2.mat'
-        dir_img_batch = root + 'img_test_stg4_' + str(batch) + '_2.mat'
-
-        depth_out_batch_disp = scio.loadmat(dir_depth_out_batch_disp)['Depth']
-        depth_ori_batch_disp = scio.loadmat(dir_depth_ori_batch_disp)['Depth']
-        heatmap_out_batch_disp = scio.loadmat(dir_heatmap_out_batch_disp)['HeatMap']
-        heatmap_ori_batch_disp = scio.loadmat(dir_heatmap_ori_batch_disp)['HeatMap']
-        posit_out_batch_disp = scio.loadmat(dir_posit_out_batch_disp)['Position']
-        posit_ori_batch_disp = scio.loadmat(dir_posit_ori_batch_disp)['Position']
-        img_batch = scio.loadmat(dir_img_batch)['img']
-
-        for k in range(0, batch_size):
-            depth_out_disp = depth_out_batch_disp[k, :, :].reshape([15, 64])
-            depth_ori_disp = depth_ori_batch_disp[k, :, :].reshape([15, 64])
-            heatmap_out_disp = heatmap_out_batch_disp[k, :, :, :].reshape([15, 64, 64])
-            heatmap_ori_disp = heatmap_ori_batch_disp[k, :, :, :].reshape([15, 64, 64])
-            posit_out_disp = posit_out_batch_disp[k, :, :].reshape([128, 128])
-            posit_ori_disp = posit_ori_batch_disp[k, :, :].reshape([128, 128])
-
-            po_out_disp, hm_out_disp, dp_out_disp = get_posit(posit_out_disp, heatmap_out_disp, depth_out_disp)
-            po_ori_disp, hm_ori_disp, dp_ori_disp = get_posit(posit_ori_disp, heatmap_ori_disp, depth_ori_disp)
-
-            fig = plt.figure(1)
-            ax = fig.add_subplot(111, projection='3d')
-            fig2 = plt.figure(2)
-            ax2 = fig2.add_subplot(111, projection='3d')
-            fig3 = plt.figure(3)
-            ax3 = fig3.add_subplot(111)
-
-            for n in range(16):
-                ax.scatter(hm_ori_disp[n, 1], hm_ori_disp[n, 0], -dp_ori_disp[n], c='b', marker='^')
-                ax.scatter(hm_out_disp[n, 1], hm_out_disp[n, 0], -dp_out_disp[n], c='r', marker='o')
-
-                ax2.scatter(-hm_ori_disp[n, 1] + po_ori_disp[0], hm_ori_disp[n, 0], dp_ori_disp[n] + po_ori_disp[1], c='b', marker='^')
-                ax2.scatter(-hm_out_disp[n, 1] + po_out_disp[0], hm_out_disp[n, 0], dp_out_disp[n] + po_out_disp[1], c='r', marker='o')
-
-            for n in range(15):
-                x_ori = np.zeros([2])
-                y_ori = np.zeros([2])
-                z_ori = np.zeros([2])
-                x_ori[0] = hm_ori_disp[skeleton[n, 0], 1]
-                y_ori[0] = hm_ori_disp[skeleton[n, 0], 0]
-                z_ori[0] = -dp_ori_disp[skeleton[n, 0]]
-                x_ori[1] = hm_ori_disp[skeleton[n, 1], 1]
-                y_ori[1] = hm_ori_disp[skeleton[n, 1], 0]
-                z_ori[1] = -dp_ori_disp[skeleton[n, 1]]
-                ax.plot(x_ori, y_ori, z_ori, c='b')
-
-                x_out = np.zeros([2])
-                y_out = np.zeros([2])
-                z_out = np.zeros([2])
-                x_out[0] = hm_out_disp[skeleton[n, 0], 1]
-                y_out[0] = hm_out_disp[skeleton[n, 0], 0]
-                z_out[0] = -dp_out_disp[skeleton[n, 0]]
-                x_out[1] = hm_out_disp[skeleton[n, 1], 1]
-                y_out[1] = hm_out_disp[skeleton[n, 1], 0]
-                z_out[1] = -dp_out_disp[skeleton[n, 1]]
-                ax.plot(x_out, y_out, z_out, c='r')
-
-                x_ori2 = np.zeros([2])
-                y_ori2 = np.zeros([2])
-                z_ori2 = np.zeros([2])
-                x_ori2[0] = -hm_ori_disp[skeleton[n, 0], 1] + po_ori_disp[0]
-                y_ori2[0] = hm_ori_disp[skeleton[n, 0], 0]
-                z_ori2[0] = dp_ori_disp[skeleton[n, 0]] + po_ori_disp[1]
-                x_ori2[1] = -hm_ori_disp[skeleton[n, 1], 1] + po_ori_disp[0]
-                y_ori2[1] = hm_ori_disp[skeleton[n, 1], 0]
-                z_ori2[1] = dp_ori_disp[skeleton[n, 1]] + po_ori_disp[1]
-                ax2.plot(x_ori2, y_ori2, z_ori2, c='b')
-
-                x_out2 = np.zeros([2])
-                y_out2 = np.zeros([2])
-                z_out2 = np.zeros([2])
-                x_out2[0] = -hm_out_disp[skeleton[n, 0], 1] + po_out_disp[0]
-                y_out2[0] = hm_out_disp[skeleton[n, 0], 0]
-                z_out2[0] = dp_out_disp[skeleton[n, 0]] + po_out_disp[1]
-                x_out2[1] = -hm_out_disp[skeleton[n, 1], 1] + po_out_disp[0]
-                y_out2[1] = hm_out_disp[skeleton[n, 1], 0]
-                z_out2[1] = dp_out_disp[skeleton[n, 1]] + po_out_disp[1]
-                ax2.plot(x_out2, y_out2, z_out2, c='r')
-
-            ax.set_xlabel('X')
-            ax.set_ylabel('Y')
-            ax.set_zlabel('Z')
-            ax.view_init(elev=90, azim=0, roll=90)
-            ax.axis('equal')
-            ax2.set_xlabel('X')
-            ax2.set_ylabel('Y')
-            ax2.set_zlabel('Z')
-            ax2.view_init(elev=90, azim=0, roll=90)
-            ax2.axis('equal')
-            ax3.imshow((img_batch[k, :, :, :] / 255).reshape([720, 2560, 3]))
-            print(f'batch={batch}, k={k}')
-            plt.show()
-            input()
-            plt.close('all')
+    # skeleton = np.array(
+    #     [[14, 0], [0, 15], [15, 13], [13, 7], [13, 10], [7, 8], [8, 9], [10, 11], [11, 12], [0, 1], [1, 2], [2, 3],
+    #      [0, 4], [4, 5], [5, 6]])
+    #
+    # for batch in range(24):
+    #     root = './Single Person Output/'
+    #     dir_depth_out_batch_disp = root + 'depth_stg4_' + str(batch) + '_2.mat'
+    #     dir_depth_ori_batch_disp = root + 'depth_test_stg4_' + str(batch) + '_2.mat'
+    #     dir_heatmap_out_batch_disp = root + 'heatmap_stg4_' + str(batch) + '_2.mat'
+    #     dir_heatmap_ori_batch_disp = root + 'heatmap_test_stg4_' + str(batch) + '_2.mat'
+    #     dir_posit_out_batch_disp = root + 'posit_stg4_' + str(batch) + '_2.mat'
+    #     dir_posit_ori_batch_disp = root + 'posit_test_stg4_' + str(batch) + '_2.mat'
+    #     dir_img_batch = root + 'img_test_stg4_' + str(batch) + '_2.mat'
+    #
+    #     depth_out_batch_disp = scio.loadmat(dir_depth_out_batch_disp)['Depth']
+    #     depth_ori_batch_disp = scio.loadmat(dir_depth_ori_batch_disp)['Depth']
+    #     heatmap_out_batch_disp = scio.loadmat(dir_heatmap_out_batch_disp)['HeatMap']
+    #     heatmap_ori_batch_disp = scio.loadmat(dir_heatmap_ori_batch_disp)['HeatMap']
+    #     posit_out_batch_disp = scio.loadmat(dir_posit_out_batch_disp)['Position']
+    #     posit_ori_batch_disp = scio.loadmat(dir_posit_ori_batch_disp)['Position']
+    #     img_batch = scio.loadmat(dir_img_batch)['img']
+    #
+    #     for k in range(0, batch_size):
+    #         depth_out_disp = depth_out_batch_disp[k, :, :].reshape([15, 64])
+    #         depth_ori_disp = depth_ori_batch_disp[k, :, :].reshape([15, 64])
+    #         heatmap_out_disp = heatmap_out_batch_disp[k, :, :, :].reshape([15, 64, 64])
+    #         heatmap_ori_disp = heatmap_ori_batch_disp[k, :, :, :].reshape([15, 64, 64])
+    #         posit_out_disp = posit_out_batch_disp[k, :, :].reshape([128, 128])
+    #         posit_ori_disp = posit_ori_batch_disp[k, :, :].reshape([128, 128])
+    #
+    #         po_out_disp, hm_out_disp, dp_out_disp = get_posit(posit_out_disp, heatmap_out_disp, depth_out_disp)
+    #         po_ori_disp, hm_ori_disp, dp_ori_disp = get_posit(posit_ori_disp, heatmap_ori_disp, depth_ori_disp)
+    #
+    #         fig = plt.figure(1)
+    #         ax = fig.add_subplot(111, projection='3d')
+    #         fig2 = plt.figure(2)
+    #         ax2 = fig2.add_subplot(111, projection='3d')
+    #         fig3 = plt.figure(3)
+    #         ax3 = fig3.add_subplot(111)
+    #
+    #         for n in range(16):
+    #             ax.scatter(hm_ori_disp[n, 1], hm_ori_disp[n, 0], -dp_ori_disp[n], c='b', marker='^')
+    #             ax.scatter(hm_out_disp[n, 1], hm_out_disp[n, 0], -dp_out_disp[n], c='r', marker='o')
+    #
+    #             ax2.scatter(-hm_ori_disp[n, 1] + po_ori_disp[0], hm_ori_disp[n, 0], dp_ori_disp[n] + po_ori_disp[1], c='b', marker='^')
+    #             ax2.scatter(-hm_out_disp[n, 1] + po_out_disp[0], hm_out_disp[n, 0], dp_out_disp[n] + po_out_disp[1], c='r', marker='o')
+    #
+    #         for n in range(15):
+    #             x_ori = np.zeros([2])
+    #             y_ori = np.zeros([2])
+    #             z_ori = np.zeros([2])
+    #             x_ori[0] = hm_ori_disp[skeleton[n, 0], 1]
+    #             y_ori[0] = hm_ori_disp[skeleton[n, 0], 0]
+    #             z_ori[0] = -dp_ori_disp[skeleton[n, 0]]
+    #             x_ori[1] = hm_ori_disp[skeleton[n, 1], 1]
+    #             y_ori[1] = hm_ori_disp[skeleton[n, 1], 0]
+    #             z_ori[1] = -dp_ori_disp[skeleton[n, 1]]
+    #             ax.plot(x_ori, y_ori, z_ori, c='b')
+    #
+    #             x_out = np.zeros([2])
+    #             y_out = np.zeros([2])
+    #             z_out = np.zeros([2])
+    #             x_out[0] = hm_out_disp[skeleton[n, 0], 1]
+    #             y_out[0] = hm_out_disp[skeleton[n, 0], 0]
+    #             z_out[0] = -dp_out_disp[skeleton[n, 0]]
+    #             x_out[1] = hm_out_disp[skeleton[n, 1], 1]
+    #             y_out[1] = hm_out_disp[skeleton[n, 1], 0]
+    #             z_out[1] = -dp_out_disp[skeleton[n, 1]]
+    #             ax.plot(x_out, y_out, z_out, c='r')
+    #
+    #             x_ori2 = np.zeros([2])
+    #             y_ori2 = np.zeros([2])
+    #             z_ori2 = np.zeros([2])
+    #             x_ori2[0] = -hm_ori_disp[skeleton[n, 0], 1] + po_ori_disp[0]
+    #             y_ori2[0] = hm_ori_disp[skeleton[n, 0], 0]
+    #             z_ori2[0] = dp_ori_disp[skeleton[n, 0]] + po_ori_disp[1]
+    #             x_ori2[1] = -hm_ori_disp[skeleton[n, 1], 1] + po_ori_disp[0]
+    #             y_ori2[1] = hm_ori_disp[skeleton[n, 1], 0]
+    #             z_ori2[1] = dp_ori_disp[skeleton[n, 1]] + po_ori_disp[1]
+    #             ax2.plot(x_ori2, y_ori2, z_ori2, c='b')
+    #
+    #             x_out2 = np.zeros([2])
+    #             y_out2 = np.zeros([2])
+    #             z_out2 = np.zeros([2])
+    #             x_out2[0] = -hm_out_disp[skeleton[n, 0], 1] + po_out_disp[0]
+    #             y_out2[0] = hm_out_disp[skeleton[n, 0], 0]
+    #             z_out2[0] = dp_out_disp[skeleton[n, 0]] + po_out_disp[1]
+    #             x_out2[1] = -hm_out_disp[skeleton[n, 1], 1] + po_out_disp[0]
+    #             y_out2[1] = hm_out_disp[skeleton[n, 1], 0]
+    #             z_out2[1] = dp_out_disp[skeleton[n, 1]] + po_out_disp[1]
+    #             ax2.plot(x_out2, y_out2, z_out2, c='r')
+    #
+    #         ax.set_xlabel('X')
+    #         ax.set_ylabel('Y')
+    #         ax.set_zlabel('Z')
+    #         ax.view_init(elev=90, azim=0, roll=90)
+    #         ax.axis('equal')
+    #         ax2.set_xlabel('X')
+    #         ax2.set_ylabel('Y')
+    #         ax2.set_zlabel('Z')
+    #         ax2.view_init(elev=90, azim=0, roll=90)
+    #         ax2.axis('equal')
+    #         ax3.imshow((img_batch[k, :, :, :] / 255).reshape([720, 2560, 3]))
+    #         print(f'batch={batch}, k={k}')
+    #         plt.show()
+    #         input()
+    #         plt.close('all')
 
 
 if __name__ == '__main__':
