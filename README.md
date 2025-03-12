@@ -66,7 +66,7 @@ WiFi_Pose_Estimation
 #### **Data Collection**
 The CSI data in the dataset is obtained by [Linux 802.11n CSI Tool](https://github.com/spanev/linux-80211n-csitool), and the human pose data is collected by [PoseNet](https://github.com/mks0601/3DMPPE_POSENET_RELEASE) combined with stereo vision.
 
-#### **Variables**
+#### **Single_person_unit_train.py**
 There are several key variables in `Single_person_unit_train.py` from line 39 to line 50: 
 <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm">
  <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.45pt">
@@ -469,3 +469,6 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
  </tr>
 </tbody>
 </table>
+
+#### **transfer.py**
+
