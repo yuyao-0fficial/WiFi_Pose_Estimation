@@ -36,15 +36,13 @@ The structure of the repository is as follows:
 ```
 WiFi_Pose_Estimation
 ├── network_files
-│   └── Single_Person_Estimation_unit.py                    ## HPE Network
+│   └── Single_Person_Estimation_unit.py                        ## HPE Network
 ├── README.md
 ├── requirements.txt
-├── save_weights                                            ## Trained HPE Network Weights
+├── save_weights                                                ## Trained HPE Network Weights
 │   ├── AutoEncoder_stg3_2024_12_26_18_54_37.pth
 │   └── Single_Person_Estimator_4_2024_9_23_9_7_15.pth
-├── single_person_annotation_5
-│   ├── pose_err.mat
-│   ├── posit_err.mat
+├── single_person_annotation_5                                  ## Dataset
 │   └── single person
 │       ├── csi
 │       │   └── test_conti.mat
@@ -57,10 +55,10 @@ WiFi_Pose_Estimation
 │       │       └── output_20231203143833_000000252.jpg
 │       └── pose
 │           └── test_conti.mat
-├── Single_person_Dataset.py
-├── Single Person Output
-├── Single_person_unit_train.py
-├── transfer.py
+├── Single_person_Dataset.py                                    ## Preprocessing
+├── Single Person Output                                        ## The storage directory of the HPE model output
+├── Single_person_unit_train.py                                 ## The code to train and test the HPE model
+├── transfer.py                                                 ## The code to evaluate the estimated poses
 └── utils
     └── Single_Person_Estimator_Loss_3.py
 
