@@ -5,7 +5,9 @@ This is the key source code for paper **AI-Based Real-Time WiFi Human Pose Estim
 
 ### **Requirements**
 ** *python 3.8* **
+
 **Anaconda** is strongly recommended for managing python packages.
+
 **Cuda** and **Nvidia graphics cards** are strongly recommended for acceleration.
 
 ### **Quick Start**
