@@ -68,9 +68,9 @@ The CSI data in the dataset is obtained by [Linux 802.11n CSI Tool](https://gith
 
 #### **Variables**
 There are several key variables in `Single_person_unit_train.py` from line 39 to line 50: 
-<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
- <tbody><tr style="height:12.45pt">
-  <td width="113" valign="top" style="width:84.8pt;border:solid windowtext 1.0pt;
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.45pt">
+  <td width="123" valign="top" style="width:92.2pt;border:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Variable Name</span></p>
@@ -80,19 +80,19 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Meaning</span></p>
   </td>
-  <td width="50" valign="top" style="width:37.25pt;border:solid windowtext 1.0pt;
+  <td width="75" valign="top" style="width:56.3pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Value</span></p>
   </td>
-  <td width="220" valign="top" style="width:165.2pt;border:solid windowtext 1.0pt;
+  <td width="312" valign="top" style="width:233.85pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Effect</span></p>
   </td>
  </tr>
- <tr style="height:38.5pt">
-  <td width="113" rowspan="3" style="width:84.8pt;border:solid windowtext 1.0pt;
+ <tr style="mso-yfti-irow:1;height:38.5pt">
+  <td width="123" rowspan="3" style="width:92.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:38.5pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">`stg`</span></p>
@@ -103,13 +103,13 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Training Stage</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:38.5pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:38.5pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">0~3</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:38.5pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
@@ -117,14 +117,14 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   each stage using the output from the previous stage as input.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+ <tr style="mso-yfti-irow:2;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">4</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
@@ -132,26 +132,26 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   model.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+ <tr style="mso-yfti-irow:3;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">else</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
-  inter-ideograph;line-height:normal"><span lang="EN-US">Train the localization module
-  in the HPE model separately.</span></p>
+  inter-ideograph;line-height:normal"><span lang="EN-US">Train the localization
+  module in the HPE model separately.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" rowspan="2" style="width:84.8pt;border:solid windowtext 1.0pt;
+ <tr style="mso-yfti-irow:4;height:12.45pt">
+  <td width="123" rowspan="2" style="width:92.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">`continu`</span></p>
+  line-height:normal"><span lang="EN-US">`<span class="SpellE">continu</span>`</span></p>
   </td>
   <td width="170" rowspan="2" style="width:127.55pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -160,13 +160,13 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   line-height:normal"><span lang="EN-US">Whether to continue the previous
   training</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">0</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
@@ -174,14 +174,14 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   random weights.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+ <tr style="mso-yfti-irow:5;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">1</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
@@ -189,8 +189,8 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   weights to start training.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+ <tr style="mso-yfti-irow:6;height:12.45pt">
+  <td width="123" style="width:92.2pt;border:solid windowtext 1.0pt;border-top:
   none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">L_R</span></p>
@@ -201,13 +201,13 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Learning Rate</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">0~1</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
@@ -215,11 +215,11 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   during gradient descent.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" rowspan="2" style="width:84.8pt;border:solid windowtext 1.0pt;
+ <tr style="mso-yfti-irow:7;height:12.45pt">
+  <td width="123" rowspan="2" style="width:92.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">flag_train</span></p>
+  line-height:normal"><span class="SpellE"><span lang="EN-US">flag_train</span></span></p>
   </td>
   <td width="170" rowspan="2" style="width:127.55pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -227,38 +227,38 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Training or not</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">0</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
   inter-ideograph;line-height:normal"><span lang="EN-US">No, start testing.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+ <tr style="mso-yfti-irow:8;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">1</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
   inter-ideograph;line-height:normal"><span lang="EN-US">Yes, start training.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+ <tr style="mso-yfti-irow:9;height:12.45pt">
+  <td width="123" style="width:92.2pt;border:solid windowtext 1.0pt;border-top:
   none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">losses_weight</span></p>
+  line-height:normal"><span class="SpellE"><span lang="EN-US">losses_weight</span></span></p>
   </td>
   <td width="170" style="width:127.55pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -266,26 +266,54 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">One of the weights in the loss function</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">0~1</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">The weight in the loss function
+  to regulate the contributions of depth and heat map. The greater the weight,
+  the greater the contribution of heat map to the loss function.</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:10;height:12.45pt">
+  <td width="123" style="width:92.2pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span class="SpellE"><span lang="EN-US">loss_posit_weight</span></span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">One of the weights in the loss function</span></p>
+  </td>
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">0~1</span></p>
+  </td>
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
   inter-ideograph;line-height:normal"><span lang="EN-US">The weight in the loss
-  function to regulate the contributions of depth and heat map. The greater the
-  weight, the greater the contribution of heat map to the loss function.</span></p>
+  function to regulate the contributions of localization and pose estimation.
+  The greater the weight, the greater the contribution of localization to the
+  loss function.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+ <tr style="mso-yfti-irow:11;height:12.45pt">
+  <td width="123" style="width:92.2pt;border:solid windowtext 1.0pt;border-top:
   none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">loss_posit_weight</span></p>
+  line-height:normal"><span class="SpellE"><span lang="EN-US">max_weight</span></span></p>
   </td>
   <td width="170" style="width:127.55pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -293,41 +321,13 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">One of the weights in the loss function</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">0~1</span></p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
-  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
-  inter-ideograph;line-height:normal"><span lang="EN-US">The weight in the loss
-  function to regulate the contributions of localization and pose estimation. The
-  greater the weight, the greater the contribution of localization to the loss
-  function.</span></p>
-  </td>
- </tr>
- <tr style="height:12.45pt">
-  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
-  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
-  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">max_weight</span></p>
-  </td>
-  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
-  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">One of the weights in the loss function</span></p>
-  </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
-  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">0~1</span></p>
-  </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
@@ -337,8 +337,8 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   error to the loss function.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+ <tr style="mso-yfti-irow:12;height:12.45pt">
+  <td width="123" style="width:92.2pt;border:solid windowtext 1.0pt;border-top:
   none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">total</span></p>
@@ -349,13 +349,13 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">The total number of data</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  line-height:normal"><span lang="EN-US">1~</span>∞</p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
@@ -363,11 +363,11 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   progress.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+ <tr style="mso-yfti-irow:13;height:12.45pt">
+  <td width="123" style="width:92.2pt;border:solid windowtext 1.0pt;border-top:
   none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">batch_size</span></p>
+  line-height:normal"><span class="SpellE"><span lang="EN-US">batch_size</span></span></p>
   </td>
   <td width="170" style="width:127.55pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -375,13 +375,13 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Batch size in training</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  line-height:normal"><span lang="EN-US">1~</span>∞</p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
@@ -389,11 +389,11 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   training.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+ <tr style="mso-yfti-irow:14;height:12.45pt">
+  <td width="123" style="width:92.2pt;border:solid windowtext 1.0pt;border-top:
   none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">batch_val</span></p>
+  line-height:normal"><span class="SpellE"><span lang="EN-US">batch_val</span></span></p>
   </td>
   <td width="170" style="width:127.55pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -401,24 +401,25 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Batch size in validation</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  line-height:normal"><span lang="EN-US">1~</span>∞</p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
-  inter-ideograph;line-height:normal"><span lang="EN-US">Control batch size in validation.</span></p>
+  inter-ideograph;line-height:normal"><span lang="EN-US">Control batch size in
+  validation.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+ <tr style="mso-yfti-irow:15;height:12.45pt">
+  <td width="123" style="width:92.2pt;border:solid windowtext 1.0pt;border-top:
   none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">batch_test</span></p>
+  line-height:normal"><span class="SpellE"><span lang="EN-US">batch_test</span></span></p>
   </td>
   <td width="170" style="width:127.55pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -426,21 +427,22 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">Batch size in testing</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  line-height:normal"><span lang="EN-US">1~</span>∞</p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
-  inter-ideograph;line-height:normal"><span lang="EN-US">Control batch size in testing.</span></p>
+  inter-ideograph;line-height:normal"><span lang="EN-US">Control batch size in
+  testing.</span></p>
   </td>
  </tr>
- <tr style="height:12.45pt">
-  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+ <tr style="mso-yfti-irow:16;mso-yfti-lastrow:yes;height:12.45pt">
+  <td width="123" style="width:92.2pt;border:solid windowtext 1.0pt;border-top:
   none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">epoch</span></p>
@@ -451,18 +453,18 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
   line-height:normal"><span lang="EN-US">The number of training epochs</span></p>
   </td>
-  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <td width="75" style="width:56.3pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  line-height:normal"><span lang="EN-US">1~</span>∞</p>
   </td>
-  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  <td width="312" style="width:233.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
-  inter-ideograph;line-height:normal"><span lang="EN-US">Control the number of training
-  epochs.</span></p>
+  inter-ideograph;line-height:normal"><span lang="EN-US">Control the number of
+  training epochs.</span></p>
   </td>
  </tr>
 </tbody>
