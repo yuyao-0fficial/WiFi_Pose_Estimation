@@ -68,4 +68,402 @@ The CSI data in the dataset is obtained by [Linux 802.11n CSI Tool](https://gith
 
 #### **Variables**
 There are several key variables in `Single_person_unit_train.py` from line 39 to line 50: 
-
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+ <tbody><tr style="height:12.45pt">
+  <td width="113" valign="top" style="width:84.8pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Variable Name</span></p>
+  </td>
+  <td width="170" valign="top" style="width:127.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Meaning</span></p>
+  </td>
+  <td width="50" valign="top" style="width:37.25pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Value</span></p>
+  </td>
+  <td width="220" valign="top" style="width:165.2pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Effect</span></p>
+  </td>
+ </tr>
+ <tr style="height:38.5pt">
+  <td width="113" rowspan="3" style="width:84.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:38.5pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">`stg`</span></p>
+  </td>
+  <td width="170" rowspan="3" style="width:127.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:38.5pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Training Stage</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:38.5pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">0~3</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:38.5pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Train the Autoencoder,
+  each stage using the output from the previous stage as input.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">4</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Train the entire HPE
+  model.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">else</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Train the localization module
+  in the HPE model separately.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" rowspan="2" style="width:84.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">`continu`</span></p>
+  </td>
+  <td width="170" rowspan="2" style="width:127.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Whether to continue the previous
+  training</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">0</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">No, start training with
+  random weights.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">1</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Yes, load existing
+  weights to start training.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">L_R</span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Learning Rate</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">0~1</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Control the step size
+  during gradient descent.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" rowspan="2" style="width:84.8pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">flag_train</span></p>
+  </td>
+  <td width="170" rowspan="2" style="width:127.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Training or not</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">0</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">No, start testing.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">1</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Yes, start training.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">losses_weight</span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">One of the weights in the loss function</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">0~1</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">The weight in the loss
+  function to regulate the contributions of depth and heat map. The greater the
+  weight, the greater the contribution of heat map to the loss function.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">loss_posit_weight</span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">One of the weights in the loss function</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">0~1</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">The weight in the loss
+  function to regulate the contributions of localization and pose estimation. The
+  greater the weight, the greater the contribution of localization to the loss
+  function.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">max_weight</span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">One of the weights in the loss function</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">0~1</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">The weight in the loss
+  function to regulate the contributions of per-pixel error and peak position
+  error. The greater the weight, the greater the contribution of peak position
+  error to the loss function.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">total</span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">The total number of data</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Used to show training
+  progress.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">batch_size</span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Batch size in training</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Control batch size in
+  training.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">batch_val</span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Batch size in validation</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Control batch size in validation.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">batch_test</span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">Batch size in testing</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Control batch size in testing.</span></p>
+  </td>
+ </tr>
+ <tr style="height:12.45pt">
+  <td width="113" style="width:84.8pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">epoch</span></p>
+  </td>
+  <td width="170" style="width:127.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">The number of training epochs</span></p>
+  </td>
+  <td width="50" style="width:37.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span lang="EN-US">1~</span><span lang="EN-US">∞</span></p>
+  </td>
+  <td width="220" style="width:165.2pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;text-align:justify;text-justify:
+  inter-ideograph;line-height:normal"><span lang="EN-US">Control the number of training
+  epochs.</span></p>
+  </td>
+ </tr>
+</tbody>
+</table>
