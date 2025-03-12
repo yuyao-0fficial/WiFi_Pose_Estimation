@@ -17,15 +17,15 @@ conda create -n #your_virtual_environment_name python=3.8 anaconda
 conda activate #your_virtual_environment_name
 ```
 
-Install dependencies according to `requirements.txt`:
-```
-conda install --yes --file requirements.txt
-```
-
 Clone the repository to local directory and enter it:
 ```
 git clone https://github.com/yuyao-0fficial/WiFi_Pose_Estimation.git
 cd WiFi_Pose_Estimation
+```
+
+Install dependencies according to `requirements.txt`:
+```
+conda install --yes --file requirements.txt
 ```
 
 Run `Single_person_unit_train.py` to invoke HPE network and estimate human pose through CSI:
