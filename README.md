@@ -103,7 +103,7 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <td width="123" rowspan="3" style="width:92.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:38.5pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">`stg`</span></p>
+  line-height:normal"><span lang="EN-US">stg</span></p>
   </td>
   <td width="170" rowspan="3" style="width:127.55pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -159,7 +159,7 @@ There are several key variables in `Single_person_unit_train.py` from line 39 to
   <td width="123" rowspan="2" style="width:92.2pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:12.45pt">
   <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
-  line-height:normal"><span lang="EN-US">`<span class="SpellE">continu</span>`</span></p>
+  line-height:normal"><span lang="EN-US"><span class="SpellE">continu</span></span></p>
   </td>
   <td width="170" rowspan="2" style="width:127.55pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
